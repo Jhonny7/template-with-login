@@ -1,0 +1,146 @@
+/*Imports*/
+@import "../assets/css/animations.scss";
+
+/*Estilo de alerta generica de lotería*/
+.alerta-loteria {
+  .alert-wrapper {
+    width: 100%;
+    border-radius: 13px;
+    .alert-head{
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.82);
+    }
+    .alert-button-group {
+      padding: 0px;
+      text-align: center;
+      justify-content: center;
+      .alert-button {
+        margin: 0px;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        justify-content: center;
+        text-transform: initial;
+        padding: 13px;
+        font-size: 16px;
+        background-color: rgba(45, 128, 35, 0.8);
+        span{
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+//**//
+
+/*********/
+.show-tabbar {
+  background-color: #258649 !important;
+}
+
+.tabs-ios .tab-button:hover:not(.disable-hover),
+.tabs-ios .tab-button[aria-selected="true"] {
+  color: #fff !important;
+  font-size: 12px;
+  -webkit-transition: all 0.3s ease;
+}
+
+.tabs-ios .tab-button[aria-selected="true"] .tab-button-icon {
+  color: #fff !important;
+}
+
+.tabs-ios .tab-button .tab-button-icon {
+  color: #750808 !important;
+}
+
+.tabs-md .tab-button:hover:not(.disable-hover),
+.tabs-md .tab-button[aria-selected="true"] {
+  color: #fff !important;
+  font-size: 12px;
+  -webkit-transition: all 0.3s ease;
+}
+
+.tabs-md .tab-button[aria-selected="true"] .tab-button-icon {
+  color: #fff !important;
+}
+
+.tabs-md .tab-button .tab-button-icon {
+  color: #750808 !important;
+}
+
+.tab-button {
+  color: #750808 !important;
+}
+
+ion-icon {
+  &[class*="custom-"] {
+    // Instead of using the font-based icons
+    // We're applying SVG masks
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em;
+  }
+  &[class*="custom-mesa"] {
+    mask-image: url(../assets/imgs/tabs/man.svg);
+    //background: map-get($colors, off);
+  }
+  &[class*="custom-card"] {
+    mask-image: url(../assets/imgs/tabs/cards.svg);
+    //background: map-get($colors, off);
+  }
+}
+
+.loading-ios .loading-wrapper {
+  padding-left: unset;
+  padding-right: unset;
+  -webkit-padding-start: 24px;
+  padding-inline-start: 24px;
+  -webkit-padding-end: 24px;
+  padding-inline-end: 24px;
+  opacity: 1;
+  transform: scale(2) !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+  box-shadow: none;
+}
+.loading-md .loading-wrapper {
+  padding-left: unset;
+  padding-right: unset;
+  -webkit-padding-start: 24px;
+  padding-inline-start: 24px;
+  -webkit-padding-end: 24px;
+  padding-inline-end: 24px;
+  opacity: 1;
+  transform: scale(2) !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+  box-shadow: none;
+}
+
+ion-spinner {
+  * {
+    stroke: map-get($colors , loader ) !important;
+  }
+
+  &.spinner-circles circle,
+  &.spinner-bubbles circle,
+  &.spinner-dots circle {
+    fill: map-get($colors , loader ) !important;
+  }
+}
+
+.refresher-refreshing .spinner-bubbles circle,
+.refresher-refreshing .spinner-circles circle,
+.refresher-refreshing .spinner-dots circle {
+  fill: map-get($colors , loader ) !important;
+}
+
+.refresher-pulling-icon,
+.refresher-refreshing-icon {
+  text-align: center;
+  transform-origin: center;
+  font-size: 30px;
+  color: map-get($colors , loader ) !important;
+  transition: 200ms;
+}
